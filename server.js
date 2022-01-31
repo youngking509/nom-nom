@@ -27,7 +27,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 const UserSchema = new mongoose.Schema({
     name: String,
-    // recipes: [Recipe.ObjectId]
+    // recipes: []
 }, { timestamps: true });
 
 const User = mongoose.model("User", UserSchema);
@@ -48,7 +48,7 @@ app.get("/", (req, res) => {
 });
 
 // INDEX
-app.get('/user', async (req, res) => {
+app.get('/recipes', async (req, res) => {
     try {
         res.json(await User.find({}));
     } catch (error) {
@@ -57,7 +57,7 @@ app.get('/user', async (req, res) => {
 });
 
 // UPDATE
-app.put('/user/:id', async (req, res) => {
+app.put('/recipes/:id', async (req, res) => {
     try {
         res.json(await User.findByIdAndUpdate(req.params.id, req.body, { new: true }));
     } catch (error) {
@@ -66,7 +66,7 @@ app.put('/user/:id', async (req, res) => {
 });
 
 // CREATE
-app.post('/user', async (req, res) => {
+app.post('/recipes', async (req, res) => {
     try {
         res.json(await User.create(req.body));
     } catch (error) {
@@ -75,7 +75,7 @@ app.post('/user', async (req, res) => {
 });
 
 // DELETE
-app.delete('/user/:id', async (req, res) => {
+app.delete('/recipes/:id', async (req, res) => {
     try {
         res.json(await User.findByIdAndDelete(req.params.id));
     } catch (error) {
