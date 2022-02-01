@@ -29,7 +29,7 @@ const UserSchema = new mongoose.Schema({
     name: String,
     title: String,
     image: String,
-    readyInMinutes: Number,
+    readyInMinutes: String,
     instructions: String
 }, { timestamps: true });
 
