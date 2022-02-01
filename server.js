@@ -27,7 +27,10 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 const UserSchema = new mongoose.Schema({
     name: String,
-    // recipes: []
+    title: String,
+    image: String,
+    readyInMinutes: Number,
+    instructions: String
 }, { timestamps: true });
 
 const User = mongoose.model("User", UserSchema);
