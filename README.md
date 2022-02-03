@@ -49,7 +49,7 @@ Nom-Nom is a content driven web app that allows users to create, update and dele
 * Users will be able to login to edit or post
 
 ## <a name="deployment"></a>Deployed Link
-[Netlify](https://compapp21.netlify.app)
+[Netlify](https://nom-nom.netlify.app/)
 
 * You can view the repository:
 [Github.com](https://github.com/youngking509/nom-nom-frontend  https://github.com/youngking509/nom-nom-backend) 
